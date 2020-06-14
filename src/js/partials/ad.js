@@ -1,22 +1,23 @@
 class Ad {
   constructor(item) {
     this.item = item;
-    this.startCup = gsap.timeline();
+    //this.startCup = gsap.timeline();
   }
 
   init() {
-    this.startCup.to(".js-startCup", {duration: 2, delay: .3, y: 60});
-    this.startCup.to(".js-sweets-left", {duration: .5, y: -60});
-    this.startCup.to(".js-sweets-right", {duration: .3, y: -30});
-    this.startCup.to(".js-sweets", {duration: 10, delay: .5, y: 1000});
+    gsap.to(".js-startCup", {duration: 2, delay: .3, y: 60});
+    gsap.to(".js-startCup", {duration: 2, onComplete: this.startSweets});
+
+    //this.startCup.to(".js-sweets", {duration: 10, delay: .5, y: 1000});
     //this.startCup.to(".js-sweets-right", {duration: 10, delay: .5, y: 1000});
     //this.startCup.to(".js-startCup", {duration: 2, delay: .3, y: 60});
 
   }
 
   startSweets() {
-
-    //sweets.to(".js-sweets", {duration: 5, y: -100, onComplete: this.fallSweets()});
+    gsap.to(".js-sweets-left", {duration: .5, y: -60});
+    gsap.to(".js-sweets-right", {duration: 1, y: -60});
+    //gsap.to(".js-sweets", {duration: 5, y: -100, onComplete: this.fallSweets()});
 
   }
 

@@ -4,11 +4,9 @@
   height: 100%;
   &__startCup {
     position: absolute;
-    left: 0;
+    left: calc(50% - 250px);
     top: 0;
-    max-height: 1100px;
-    max-width: 600px;
-    width: 100%;
+    width: 600px;
     transform: translateY(100%);
     z-index: 101;
     img {
