@@ -29,7 +29,9 @@ class Ad {
   }
 
 
-  startPeople(){
-
+  startPeople() {
+    gsap.to(".js-blackening", {duration: 3, ease: Power1.easeOut, opacity: 1});
+    gsap.to(".js-peopleLeft", {duration: 2, ease: Power1.easeOut, x: 0});
+    gsap.to(".js-peopleRight", {duration: 2, ease: Power1.easeOut, x: 0});
   }
 }
