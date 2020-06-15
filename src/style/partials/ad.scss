@@ -39,6 +39,7 @@
     position: absolute;
     top: 0;
     height: 100%;
+    opacity: 0;
     img {
       height: 100%;
     }
@@ -54,6 +55,10 @@
     transform-origin: center top;
     z-index: 105;
   }
+  &__textGlory {
+    position: relative;
+    z-index: 106;
+  }
 }
 .blackening {
   width: 100%;
@@ -64,4 +69,25 @@
   background-color: $base;
   z-index: 103;
   opacity: 0;
+}
+.textGlory {
+  font-size: 6.4rem;
+  font-family: $font-family-base;
+  text-shadow: 17px 15px 23px rgba(0, 0, 0, 1);
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  &__one {
+    font-size: 16rem;
+    line-height: 11rem;
+  }
+  &__game {
+    font-size: 11.2rem;
+    line-height: 11rem;
+    height: 9rem;
+  }
 }

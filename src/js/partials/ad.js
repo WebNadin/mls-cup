@@ -30,8 +30,10 @@ class Ad {
 
 
   startPeople() {
-    gsap.to(".js-blackening", {duration: 3, ease: Power1.easeOut, opacity: 1});
+    gsap.to(".js-blackening", {duration: 2, delay: .3, ease: Power1.easeOut, opacity: 1});
     gsap.to(".js-peopleLeft", {duration: 2, ease: Power1.easeOut, x: 0});
+    gsap.to(".js-peopleLeft", {duration: .3, opacity: 1});
     gsap.to(".js-peopleRight", {duration: 2, ease: Power1.easeOut, x: 0});
+    gsap.to(".js-peopleRight", {duration: .3, opacity: 1});
   }
 }
