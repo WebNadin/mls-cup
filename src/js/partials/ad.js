@@ -54,7 +54,7 @@ class Ad {
     gsap.to(".js-glory-copyLeft", {duration: 3, delay: 3.3, x: 200, y: 30});
     gsap.to(".js-glory-copyRight", {duration: 3, delay: 3.3, x: -200, y: 30});
     gsap.to(".js-textGlory", {duration: 2, delay: 3.3, opacity: 0});
-    gsap.to(".js-blackening", {duration: .1, delay: 1, opacity: .8});
+    gsap.to(".js-blackening", {duration: .1, delay: 1, opacity: 1});
   }
 
   finishPeople() {
