@@ -92,29 +92,154 @@ ul, ol {
   text-align: center;
   padding: 0 90px;
   position: relative;
-  &__ad{
-    display: none;
-    background-color: red;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 }
-.title
-/******* atomic classes *******/
-._bold {
-  font-weight: bold;
-}
-._verticalStretch {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  .main {
+.modal {
+  width: 100vw;
+  height: 100vh;
+  transform: scale(.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(239, 1, 124, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  opacity: 0;
+  z-index: 100;
+  &_small {
     display: flex;
-    flex: 1;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  &_dark {
+    position: absolute;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+  }
+  &__footballer {
+    width: 60%;
+    position: relative;
+    z-index: 200;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__btn {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 200;
+  }
+  &__watch {
+    position: absolute;
+    top: 12%;
+    right: 20%;
+    font-family: $font-family-base;
+    font-size: 1rem;
+    margin: 0 auto;
+    z-index: 119;
+  }
+  &__watchTitle {
+    color: $second;
+    text-shadow: 0 2px 5px black;
+    text-transform: uppercase;
+  }
+  &__btnWatch {
+    margin: 0 auto 15px;
+    height: 50px;
+    width: 50px;
   }
 }
-/******* end_atomic slesses *******/
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  &:hover {
+    cursor: pointer;
+    opacity: .8;
+    .btn__animatedCircle {
+      transition: transform .5s;
+      transform: scale(.7);
+      opacity: .5;
+    }
+  }
+  &_big {
+    transform: scale(1.5);
+  }
+  &_watch{
+    top: -25px;
+    right: -25px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+  &__animatedCircle {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 1);
+    transition: opacity .5s, transform .5s;
+    transform: scale(.3);
+    opacity: 0;
+  }
+}
+.iconClose {
+  position: relative;
+  transform: rotate(45deg);
+  width: 14px;
+  height: 14px;
+  &__item {
+    position: absolute;
+    background: #fff;
+    width: 14px;
+    height: 1px;
+    top: calc(50% - 1px);
+    left: 0;
+    &:first-child {
+      transform: rotate(90deg);
+    }
+  }
+}
+.iconPlus {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  &__item {
+    position: absolute;
+    background: #fff;
+    width: 14px;
+    height: 1px;
+    top: calc(50% - 1px);
+    left: 0;
+    &:first-child {
+      transform: rotate(90deg);
+    }
+  }
+}
+/******* atomic classes *******/
+._fixed {
+  overflow: hidden;
+}
+/******* end_atomic classes *******/

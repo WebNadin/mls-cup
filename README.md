@@ -1,21 +1,21 @@
- # MLS Cup animated ad.
+ # MLS Cup: animated modal ad (GSAP).
 
- ![Website working gif](https://github.com/WebNadin/simple-arcade-game/blob/master/readme-img.gif)
- Website link: [kill-the-shape](http://webnadin.inf.ua/kill-the-shape/)
+ ![Website working gif](https://github.com/WebNadin/mls-cup/blob/master/readme-img.gif)
 
- There is an area with generation field and several tools for changing different indicators.
+ Website link: [MLS Cup](http://webnadin.inf.ua/mls-cup/)
+
+ You could see here an example of an animated ad creating by GSAP.
 
  In this project I mastered:
- - PIXI.js
- - creation of different shapes using PIXI.Graphics
+ - GSAP
+ - creation different animation for images, blocks, buttons, text, etc.
 
 
 ### Installation
 
 You could follow next steps to deploy a local project:
- - clone branch `master` with `git clone https://github.com/WebNadin/simple-arcade-game.git` or fork it and then clone it
- from your
- forked repo
+ - clone branch `master` with `git clone https://github.com/WebNadin/mls-cup.git` or fork it and then clone it
+ from your forked repo
 
  ```
 $ npm i
