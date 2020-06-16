@@ -4,11 +4,12 @@ class Ad {
   }
 
   init() {
+    gsap.to(".js-watch", {duration: .1, autoAlpha: 0});
     gsap.to(".js-startCup", {duration: .9, delay: .3, y: 60});
     gsap.to(".js-startCup", {duration: .6, delay: .3, onComplete: this.startSweets});
     gsap.to(".js-startCup", {duration: .6, delay: 3.3, onComplete: this.startPeople});
     gsap.to(".js-startCup", {duration: .6, delay: 5.3, onComplete: this.startTextGlory});
-    gsap.to(".js-startCup", {duration: .6, delay: 11, onComplete: this.finishPeople});
+    gsap.to(".js-startCup", {duration: .6, delay: 10, onComplete: this.finishPeople});
   }
 
   startSweets() {
@@ -52,7 +53,7 @@ class Ad {
     gsap.to(".js-glory-copyRight", {duration: 3, delay: 3.3, opacity: 0});
     gsap.to(".js-glory-copyLeft", {duration: 3, delay: 3.3, x: 200, y: 30});
     gsap.to(".js-glory-copyRight", {duration: 3, delay: 3.3, x: -200, y: 30});
-    gsap.to(".js-textGlory", {duration: 3, delay: 3.6, opacity: 0});
+    gsap.to(".js-textGlory", {duration: 2, delay: 3.3, opacity: 0});
     gsap.to(".js-blackening", {duration: .1, delay: 1, opacity: .8});
   }
 
@@ -64,6 +65,8 @@ class Ad {
     gsap.to(".js-logosLeft", {duration: 6, ease: Power1.easeOut, x: -2000});
     gsap.to(".js-peopleRight", {duration: 6, ease: Power1.easeOut, x: 2000});
     gsap.to(".js-logosRight", {duration: 6, ease: Power1.easeOut, x: 2000});
-    gsap.to(".js-blackening", {duration: 6, opacity: 0});
+    gsap.to(".js-blackening", {duration: 6, opacity: 0, autoAlpha: 0});
+    gsap.to(".js-people", {duration: .1, delay: 6.1, autoAlpha: 0});
+    gsap.to(".js-watch", {duration: .1, autoAlpha: 1});
   }
 }

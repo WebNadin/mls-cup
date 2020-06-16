@@ -1,8 +1,14 @@
 class Modal {
   constructor(item) {
     this.item = item;
-    this.closeBtn = item.querySelector('.js-closeBtn');
-    this.closeBtn.addEventListener('click', () => this.closeModal());
+    this.closeBtns = [...document.querySelectorAll('.js-closeBtn')];
+    this.closeBtns.forEach((item, i) => item.addEventListener('click', (btn) => {
+      let currentModal = null;
+      if (btn.target.parentNode.classList.contains('btn_watch')) {
+        currentModal = '.js-watchModal';
+      } else currentModal = '.js-fullModal';
+      this.closeModal(currentModal);
+    }));
   }
 
   openModal() {
@@ -12,10 +18,18 @@ class Modal {
     ad.init();
   }
 
+  openSmallModal() {
+    document.body.classList.add('_fixed');
+    gsap.to(".js-watch", {duration: .3, autoAlpha: 0});
+    gsap.to(".js-watchModal", {duration: .3, opacity: 1, scale: 1});
+  }
 
-  closeModal() {
-    gsap.to(".js-fullModal", {duration: .3, opacity: 0, scale: .3});
-    document.body.classList.remove('_fixed');
+
+  closeModal(elem) {
+    gsap.to(elem, {duration: .3, opacity: 0, scale: .3});
+    if (elem == '.js-fullModal') {
+      document.body.classList.remove('_fixed')
+    } else gsap.to(".js-watch", {duration: .3, autoAlpha: 1});
   }
 
 }
