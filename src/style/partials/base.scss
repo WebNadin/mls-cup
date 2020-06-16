@@ -111,6 +111,25 @@ ul, ol {
     right: 10px;
     z-index: 200;
   }
+  &__watch {
+    position: absolute;
+    top: 12%;
+    right: 20%;
+    font-family: $font-family-base;
+    font-size: 1rem;
+    margin: 0 auto;
+    z-index: 119;
+  }
+  &__watchTitle {
+    color: $second;
+    text-shadow: 0 2px 5px black;
+    text-transform: uppercase;
+  }
+  &__btnWatch {
+    margin: 0 auto 15px;
+    height: 50px;
+    width: 50px;
+  }
 }
 .btn {
   display: flex;
@@ -127,6 +146,9 @@ ul, ol {
       transform: scale(.7);
       opacity: .5;
     }
+  }
+  &_big {
+    transform: scale(1.5);
   }
   &__inner {
     display: flex;
@@ -168,7 +190,22 @@ ul, ol {
     }
   }
 }
-
+.iconPlus {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  &__item {
+    position: absolute;
+    background: #fff;
+    width: 14px;
+    height: 1px;
+    top: calc(50% - 1px);
+    left: 0;
+    &:first-child {
+      transform: rotate(90deg);
+    }
+  }
+}
 /******* atomic classes *******/
 ._fixed {
   overflow: hidden;
